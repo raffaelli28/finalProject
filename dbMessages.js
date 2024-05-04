@@ -1,4 +1,5 @@
 import mongoose from 'mongoose'
+//const mongoose = require('mongoose');
 
 const messageSchema = new mongoose.Schema ({
     message: String,
@@ -7,4 +8,5 @@ const messageSchema = new mongoose.Schema ({
     received: Boolean
 });
 
-export default mongoose.model('messagingschema', messageSchema)
+const Messages = mongoose.model('messagingschema', messageSchema);
+export default Messages;

@@ -68,6 +68,8 @@ app.get("/", (req, res) => res.status(200).send("Hello there!"))
 app.post('/messages/new', (req, res) => {
     const dbMessages = req.body
 
+    if(req.body)
+
     Messages.create(dbMessages, (err, data) => {
         if (err){
             res.status (500).send(err)
